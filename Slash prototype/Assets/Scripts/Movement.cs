@@ -7,13 +7,22 @@ public class Movement : MonoBehaviour
     public float movespeed;
     public bool Grounded = true;
     public bool Spacedown = false;
+    public bool Attacking = false;
     public Rigidbody2D RB;
-    public float jump;
+    public float jump_height;
     public Transform Groundcheck;
     public float Checkradius;
     public LayerMask Whatisground;
     private bool facingright = true;
     private float moveInput;
+
+    private Animator anim;
+
+    void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
+
 
 
     // Update is called once per frame
@@ -25,7 +34,7 @@ public class Movement : MonoBehaviour
 
         if (Input.GetButton("Jump") && Grounded == true && Spacedown == false)
         {
-            RB.velocity = Vector2.up * jump;
+            RB.velocity = Vector2.up * jump_height;
             Spacedown = true;
         }
 
@@ -39,8 +48,23 @@ public class Movement : MonoBehaviour
             Spacedown = true;
         }
 
-        
-        
+        if (Input.GetButtonUp("Fire1"))
+        {
+          Attacking = false;
+          if(null != anim){
+            anim.Play("New Animation", 0, 0.25f);
+          }
+        }
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Attacking = true;
+            if (null != anim){
+                  // play Bounce but start at a quarter of the way though
+                  anim.Play("AttackAnimation", 0, 0.25f);
+            }
+        }
+
     }
 
     void Flip()
@@ -64,6 +88,4 @@ public class Movement : MonoBehaviour
             Flip();
         }
     }
-
-
 }
