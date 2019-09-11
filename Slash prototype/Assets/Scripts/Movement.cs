@@ -23,21 +23,13 @@ public class Movement : MonoBehaviour
         transform.position += movement * Time.deltaTime * movespeed;
         moveInput = Input.GetAxis("Horizontal");
 
-        if (Input.GetButton("Jump") && Grounded == true && Spacedown == false)
+        if (Input.GetButtonDown("Jump") && Grounded == true && Spacedown == false)
         {
             RB.velocity = Vector2.up * jump;
-            Spacedown = true;
+            
         }
 
-        if (Input.GetButtonUp("Jump"))
-        {
-            Spacedown = false;
-        }
 
-        if (Input.GetButtonDown("Jump"))
-        {
-            Spacedown = true;
-        }
 
         
         
