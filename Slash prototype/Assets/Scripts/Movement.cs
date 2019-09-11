@@ -18,6 +18,13 @@ public class Movement : MonoBehaviour
 
     private Animator anim;
 
+    public AudioClip attackSound;
+    private AudioSource source;
+
+    void Awake(){
+      source = GetComponent<AudioSource>();
+    }
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -58,6 +65,7 @@ public class Movement : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1"))
         {
+            source.PlayOneShot(attackSound, 1F);
             Attacking = true;
             if (null != anim){
                   // play Bounce but start at a quarter of the way though
