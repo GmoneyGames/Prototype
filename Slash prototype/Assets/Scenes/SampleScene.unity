@@ -213,11 +213,11 @@ GameObject:
   m_Component:
   - component: {fileID: 795690870}
   - component: {fileID: 795690869}
-  - component: {fileID: 795690868}
   - component: {fileID: 795690871}
   - component: {fileID: 795690872}
   - component: {fileID: 795690873}
   - component: {fileID: 795690874}
+  - component: {fileID: 795690868}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -235,9 +235,9 @@ Animator:
   m_GameObject: {fileID: 795690867}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8ef6d01e6369fa545a158599cd470681, type: 2}
+  m_Controller: {fileID: 9100000, guid: c1b3d7963a9b96acfbf6a4c99fb7b777, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 1
+  m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
@@ -282,7 +282,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6395285552610817882, guid: a99a1f00ccc899a46aa6bbbabd8ac76e,
+  m_Sprite: {fileID: -6568832136626154294, guid: fa48d2353dd6a2bb2b11ef6236a3587b,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -343,18 +343,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.02576653, y: -0.069863945}
+  m_Offset: {x: -0.025766522, y: -0.032646097}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
+    pivot: {x: 0.6834652, y: 0.50000006}
+    oldSize: {x: 0.27, y: 0.5}
     newSize: {x: 0.64, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.26954836, y: 0.49656063}
+  m_Size: {x: 0.26954836, y: 0.42212492}
   m_EdgeRadius: 0
 --- !u!114 &795690873
 MonoBehaviour:
@@ -379,7 +379,7 @@ MonoBehaviour:
   Whatisground:
     serializedVersion: 2
     m_Bits: 256
-  attackSound: {fileID: 0}
+  attackSound: {fileID: 8300000, guid: 7168f01bf151b694d8439e423967ca35, type: 3}
 --- !u!82 &795690874
 AudioSource:
   m_ObjectHideFlags: 0
@@ -607,7 +607,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1472538671}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.034393292, y: -0.316, z: -0.89453125}
+  m_LocalPosition: {x: -0.034393292, y: -0.263, z: -0.89453125}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 795690870}
